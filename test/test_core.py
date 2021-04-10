@@ -4,5 +4,5 @@ from test_actions import core
 
 
 def test_method():
-    klass = core.Klass(0)
-    assert klass.method() == 42
+    klass = core.Klass(10)
+    assert klass.method() == 52
