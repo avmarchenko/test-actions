@@ -11,3 +11,7 @@ class Klass:
     def method(self):
         """non-empty"""
         return 42 + self.x
+
+    def method0(self):
+        """non-empty"""
+        return 32 + self.x
