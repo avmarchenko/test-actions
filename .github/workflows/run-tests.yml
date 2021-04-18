@@ -21,5 +21,8 @@ jobs:
   js-tests:
     runs-on: ubuntu-latest
     steps:
+      - run: pwd
+      - run: ls -lisah
+      - run: ls -lisah ../
       - run: npm install package.json
       - run: npm run test
