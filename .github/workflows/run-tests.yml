@@ -23,10 +23,8 @@ jobs:
     steps:
       - run: pwd
       - name: yup
-        working-directory: js
-        run: |
-          pwd
-          cd ${{ github.workspace }}/js
-          pwd
-          npm install package.json
-          npm run test
+        working-directory: ${{ github.workspace }}/js
+        run: npm install package.json
+      - name: yup1
+        working-directory: ${{ github.workspace }}/js
+        run: npm run test
