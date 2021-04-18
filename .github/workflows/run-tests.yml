@@ -25,5 +25,8 @@ jobs:
       - name: yup
         working-directory: js
         run: |
+          pwd
+          cd ${{ github.workspace }}/js
+          pwd
           npm install package.json
           npm run test
