@@ -4,6 +4,7 @@ jobs:
   python-tests:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "Python"
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
@@ -24,7 +25,10 @@ jobs:
       run:
         working-directory: js
     steps:
-      - run: echo "JavaScript ${{ github.event_name }}:${{ runner.os }}:${{ github.ref }}"
+      - run: echo "JavaScript"
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       - name: Check out repository code
         uses: actions/checkout@v2
       - run: pwd
