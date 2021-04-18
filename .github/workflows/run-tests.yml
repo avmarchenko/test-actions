@@ -21,9 +21,6 @@ jobs:
 
   js-tests:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: js
     steps:
       - run: echo "JavaScript"
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
@@ -32,7 +29,12 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
       - run: pwd
+        working-directory: js
       - run: ls -lisah
+        working-directory: js
       - run: ls -lisah ../
+        working-directory: js
       - run: npm install package.json
+        working-directory: js
       - run: npm run test
+        working-directory: js
