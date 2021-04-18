@@ -22,7 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: pwd
-      - run: npm install package.json
+      - name: yup
         working-directory: js
-      - run: npm run test
-        working-directory: js
+        run: |
+          npm install package.json
+          npm run test
