@@ -20,7 +20,13 @@ jobs:
 
   js-tests:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: js
     steps:
+      - run: echo "JavaScript ${{ github.event_name }}:${{ runner.os }}:${{ github.ref }}"
+      - name: Check out repository code
+        uses: actions/checkout@v2
       - run: pwd
       - run: ls -lisah
       - run: ls -lisah ../
