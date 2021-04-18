@@ -21,7 +21,7 @@ jobs:
   js-tests:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          cd js
-          npm install package.json
-          npm run test
+      - run: npm install package.json
+        working-directory: js
+      - run: npm run test
+        working-directory: js
