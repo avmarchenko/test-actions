@@ -21,10 +21,5 @@ jobs:
   js-tests:
     runs-on: ubuntu-latest
     steps:
-      - run: pwd
-      - name: yup
-        working-directory: ${{ github.workspace }}/js
-        run: npm install package.json
-      - name: yup1
-        working-directory: ${{ github.workspace }}/js
-        run: npm run test
+      - run: npm install package.json
+      - run: npm run test
